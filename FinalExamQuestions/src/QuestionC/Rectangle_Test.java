@@ -25,21 +25,13 @@ public class Rectangle_Test {
 	@After
 	public void tearDown() throws Exception {
 	}
-
-	@Test
-	public void Rectangle_Test1() {
-		
-		Rectangle r2 = new Rectangle(-5, -10);
-		assertTrue(r2.ComputeArea() == 50);
+	
+	@Test(expected = illegalRectangle.class)
+	public void Rectangle_Test1() throws illegalRectangle {
+		Rectangle r2;
+		r2 = new Rectangle(-5, -10);
 	}
-	
-	@Test
-	public void Rectangle_Test2() {
-		
-	
-		Rectangle r2 = new Rectangle(-5, -10);
-		assertTrue(r2.ComputeArea() == 50);
-	}
-	
 
+	
+	
 }
